@@ -368,7 +368,7 @@ export default function Home() {
                 />
                 <input
                   type="number"
-                  placeholder="Amount of CryptoDev tokens"
+                  placeholder="Amount of SSSnake tokens"
                   onChange={(e) =>
                     setAddCDTokens(
                       BigNumber.from(utils.parseEther(e.target.value || "0"))
@@ -400,7 +400,7 @@ export default function Home() {
                 />
                 <div className={styles.inputDiv}>
                   {/* Convert the BigNumber to string using the formatEther function from ethers.js */}
-                  {`You will need ${utils.formatEther(addCDTokens)} Crypto Dev
+                  {`You will need ${utils.formatEther(addCDTokens)} SSSnake
                   Tokens`}
                 </div>
                 <button className={styles.button1} onClick={_addLiquidity}>
@@ -423,7 +423,7 @@ export default function Home() {
               <div className={styles.inputDiv}>
                 {/* Convert the BigNumber to string using the formatEther function from ethers.js */}
                 {`You will get ${utils.formatEther(removeCD)} Crypto
-              Dev Tokens and ${utils.formatEther(removeEther)} Eth`}
+              SSSnake and ${utils.formatEther(removeEther)} Eth`}
               </div>
               <button className={styles.button1} onClick={_removeLiquidity}>
                 Remove
@@ -458,7 +458,7 @@ export default function Home() {
             }}
           >
             <option value="eth">Ethereum</option>
-            <option value="cryptoDevToken">Crypto Dev Token</option>
+            <option value="cryptoDevToken">SSSnake Token</option>
           </select>
           <br />
           <div className={styles.inputDiv}>
@@ -466,7 +466,7 @@ export default function Home() {
             {ethSelected
               ? `You will get ${utils.formatEther(
                   tokenToBeReceivedAfterSwap
-                )} Crypto Dev Tokens`
+                )} SSSnake Tokens`
               : `You will get ${utils.formatEther(
                   tokenToBeReceivedAfterSwap
                 )} Eth`}
@@ -482,15 +482,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Crypto Devs</title>
+        <title>SSSnakeSwap</title>
         <meta name="description" content="Whitelist-Dapp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs Exchange!</h1>
+          <h1 className={styles.title}>Welcome to SSSnakeSwap!</h1>
           <div className={styles.description}>
-            Exchange Ethereum &#60;&#62; Crypto Dev Tokens
+            Exchange Ethereum &#60;&#62; SSSnake Tokens
           </div>
           <div>
             <button
@@ -513,12 +513,12 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./cryptodev.svg" />
+          <img className={styles.image} src="./snakelogo.png" />
         </div>
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
+        Made with &#10084; by SSSnakeSwap
       </footer>
     </div>
   );
